@@ -15,6 +15,10 @@ class MainActivity : AppCompatActivity() {
         val myDataset = Datasource().loadAffirmations()
 
         val recyclerview = findViewById<RecyclerView>(R.id.recycler_view)
+
+        //If you want to make the layout a Grid you can do something like this...
+        //recyclerview.layoutManager = GridLayoutManager(this, 3);
+
         recyclerview.adapter = ItemAdapter(this, myDataset)
 
         /**
